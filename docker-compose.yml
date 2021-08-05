@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  mongo:
+    image: mongo
+    container_name: 'mongo-miele-events'
+    restart: always
+    volumes:
+      - ./mongo/:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: miele-events
+    ports:
+      - 27017:27017
