@@ -1,24 +1,16 @@
 {
   "name": "mieleevents",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "mieleEvents": "node ./serverSentEvents/mieleEvents.js",
-    "analyze-events": "node ./serverSentEvents/analyze-events.js"
+    "start": "node --es-module-specifier-resolution=node src/mieleEvents.mjs"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "mongodb": "^4.1.0",
-    "morgan": "~1.9.1"
-  },
-  "devDependencies": {
     "dotenv": "^10.0.0",
     "eventsource": "^1.1.0",
-    "nodemon": "^2.0.12"
+    "firebase": "^8.8.1",
+    "firebase-admin": "^9.11.0",
+    "mongodb": "^4.1.0"
   }
 }
